@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("fonts/Satoshi-Regular.ttf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.sign-up {
+  display: flex;
+  color: white;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  width: 100%;
+  margin: 0;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Satoshi", sans-serif;
+  position: relative;
+}
+
+.sign-up a {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.sign-up span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  right: 100px;
+}
+
+.sign-up img {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 768px) {
+  .sign-up {
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .sign-up a {
+    font-size: 12px;
+  }
+
+  .sign-up span {
+    display: none;
+  }
+}
