@@ -47,6 +47,25 @@ body {
   height: 12px;
 }
 
+#temp-space {
+  height: 200px;
+}
+
+#brands-container {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 22px 100px;
+}
+
+.brand-item {
+  margin: 22px 20px;
+  height: 36px;
+}
+
 @media (max-width: 768px) {
   .sign-up {
     height: 34px;
@@ -59,5 +78,10 @@ body {
 
   .sign-up span {
     display: none;
+  }
+
+  .brand-item {
+    margin: 16px 12px;
+    height: 24px;
   }
 }
