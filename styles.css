@@ -1,6 +1,11 @@
 @font-face {
   font-family: "Satoshi";
-  src: url("fonts/Satoshi-Regular.ttf") format("truetype");
+  src: url("fonts/satoshi-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Integral";
+  src: url("fonts/integralcf-demibold.otf") format("opentype");
 }
 
 html,
@@ -10,41 +15,42 @@ body {
   height: 100%;
 }
 
-.sign-up {
+#sign-up-container {
   display: flex;
-  color: white;
   background-color: black;
   align-items: center;
-  justify-content: center;
-  height: 38px;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
-  justify-content: center;
+  padding: 10px 100px;
+  box-sizing: border-box;
+}
+
+#sign-up-container p {
+  color: white;
   font-weight: 400;
   font-size: 14px;
   font-family: "Satoshi", sans-serif;
-  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
-.sign-up a {
+#sign-up-container a {
   color: white;
   font-weight: 500;
   font-size: 14px;
+  font-family: "Satoshi", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-.sign-up span {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  justify-content: center;
-  display: inline-flex;
-  align-items: center;
-  right: 100px;
-}
-
-.sign-up img {
+#sign-up-container img {
   width: 12px;
   height: 12px;
+}
+
+#close-mirror {
+  opacity: 0;
 }
 
 #temp-space {
@@ -67,17 +73,16 @@ body {
 }
 
 @media (max-width: 768px) {
-  .sign-up {
-    height: 34px;
+  #sign-up-container {
     font-size: 12px;
   }
 
-  .sign-up a {
+  #sign-up-container a {
     font-size: 12px;
   }
 
-  .sign-up span {
-    display: none;
+  #sign-up-container img {
+    opacity: 0;
   }
 
   .brand-item {

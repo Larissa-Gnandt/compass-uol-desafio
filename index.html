@@ -7,13 +7,18 @@
     <title>Homepage</title>
   </head>
   <body>
-    <p class="sign-up">
-      Sign up and get 20% off to your first order.&nbsp;
-      <a href="">Sign Up Now</a>
-      <span>
-        <img src="icons/x.svg" alt="Close" onclick="hideSignUp()" />
-      </span>
-    </p>
+    <div id="sign-up-container">
+      <img id="close-mirror" />
+      <p>
+        Sign up and get 20% off to your first order.&nbsp;
+        <a href="">Sign Up Now</a>
+      </p>
+      <img src="icons/x.svg" alt="Close" onclick="hideSignUp()" />
+    </div>
+
+    <div id="menu">
+      <img src="icons/menu.svg" alt="Menu" onclick="showMenu()" />
+    </div>
 
     <p id="temp-space" />
 
