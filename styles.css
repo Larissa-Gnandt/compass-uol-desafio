@@ -57,6 +57,102 @@ body {
   height: 200px;
 }
 
+#menu-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: white;
+  padding: 24px 100px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+#menu-container a {
+  text-decoration: none;
+}
+
+#hamburguer-menu {
+  display: none;
+}
+
+#logo {
+  font-family: "Integral", sans-serif;
+  color: black;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#navigation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+#navigation-container a {
+  font-family: "Satoshi", sans-serif;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#navigation-container a img {
+  vertical-align: middle;
+}
+
+#spacer {
+  display: none;
+}
+
+#search-container {
+  display: flex;
+  background-color: #f0f0f0;
+  align-items: center;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+#search-container img {
+  width: 20px;
+  height: 20px;
+  opacity: 40%;
+}
+
+#search-container input {
+  border: none;
+  background-color: transparent;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  opacity: 40%;
+  width: 100%;
+}
+
+#search-container input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+#search-icon {
+  display: none;
+}
+
+#user-container img {
+  width: 24px;
+  height: 24px;
+}
+
 #brands-container {
   background-color: black;
   display: flex;
@@ -88,5 +184,35 @@ body {
   .brand-item {
     margin: 16px 12px;
     height: 24px;
+  }
+
+  #menu-container {
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  #hamburguer-menu {
+    display: block;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  #navigation-container {
+    display: none;
+  }
+
+  #spacer {
+    display: block;
+    flex-grow: 1;
+  }
+
+  #search-container {
+    display: none;
+  }
+
+  #search-icon {
+    display: block;
   }
 }
