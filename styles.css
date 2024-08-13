@@ -372,6 +372,31 @@ body {
   right: 0;
 }
 
+#customes-container {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin: 80px 100px 0 100px;
+  padding: 0;
+  gap: 18px;
+}
+
+#customes {
+  font-family: "Integral", sans-serif;
+  font-size: 48px;
+  text-align: start;
+  padding: 0;
+  font-weight: 700;
+  margin: 0;
+  flex-grow: 1;
+}
+
+#spacer-customes {
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   #sign-up-container {
     font-size: 12px;
@@ -467,5 +492,9 @@ body {
   .grid-item p {
     font-size: 24px;
     margin: 16px 24px;
+  }
+
+  #customes {
+    font-size: 32px;
   }
 }

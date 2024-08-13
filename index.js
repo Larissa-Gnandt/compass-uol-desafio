@@ -1,5 +1,5 @@
 function hideSignUp() {
-  document.querySelector(".sign-up").style.display = "none";
+  document.querySelector("#sign-up-container").style.display = "none";
 }
 
 const brands = [
