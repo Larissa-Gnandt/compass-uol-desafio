@@ -12,7 +12,14 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 #sign-up-container {
@@ -51,10 +58,6 @@ body {
 
 #close-mirror {
   opacity: 0;
-}
-
-#temp-space {
-  height: 200px;
 }
 
 #menu-container {
@@ -178,7 +181,7 @@ body {
   padding: 0;
 }
 
-#arrivals-container {
+.products-container {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -189,7 +192,6 @@ body {
 
 .product-container {
   width: 295px;
-  height: 295px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -239,20 +241,20 @@ body {
   padding: 0;
 }
 
-.product-price {
-  font-family: "Satoshi", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: black;
-  margin: 0;
-  padding: 0;
-}
-
 .price-container {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.product-price {
+  font-family: "Satoshi", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
   margin: 0;
   padding: 0;
 }
@@ -279,9 +281,101 @@ body {
   border-radius: 100px;
 }
 
+.view-all-button {
+  border-radius: 62px;
+  border: 2px solid #0000001a;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin: 36px auto;
+  padding: 0;
+  display: block;
+  width: 218px;
+  height: 52px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+}
+
+.view-all-button:hover {
+  background-color: #fafafa;
+}
+
+.line {
+  width: 100% - 200px;
+  height: 1px;
+  background-color: #0000001a;
+  margin: 0 100px;
+}
+
+#top-selling {
+  font-family: "Integral", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 64px 0 0 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.browse-style-container {
+  background-color: #f5f5f5;
+  padding: 70px 64px;
+  border-radius: 40px;
+  display: grid;
+  margin: 80px 100px 0 100px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+}
+
+.grid-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Integral", sans-serif;
+  grid-column: span 3;
+  margin: 0 0 56px 0;
+  padding: 0 12px;
+}
+
+.grid-item {
+  height: 289px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-item.expanded {
+  grid-column: span 2;
+}
+
+.grid-item p {
+  font-family: "Satoshi", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+  padding: 0;
+  margin: 25px 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.grid-item img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 @media (max-width: 768px) {
   #sign-up-container {
     font-size: 12px;
+    padding: 10px 10px;
   }
 
   #sign-up-container a {
@@ -332,5 +426,46 @@ body {
 
   #news-arrivals {
     font-size: 32px;
+  }
+
+  .view-all-button {
+    font-size: 14px;
+    margin: 24px auto;
+    height: 46px;
+    width: calc(100% - 32px);
+  }
+
+  .line {
+    width: calc(100% - 32px);
+    margin: 64px 16px;
+  }
+
+  #top-selling {
+    font-size: 32px;
+    margin: 40px 0 0 0;
+  }
+
+  .browse-style-container {
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 16px 0 16px;
+    box-sizing: border-box;
+    gap: 16px;
+  }
+
+  .grid-title {
+    font-size: 32px;
+    margin: 0 0 12px 0;
+  }
+
+  .grid-item {
+    height: 190px;
+  }
+
+  .grid-item p {
+    font-size: 24px;
+    margin: 16px 24px;
   }
 }
