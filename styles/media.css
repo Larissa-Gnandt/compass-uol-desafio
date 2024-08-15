@@ -1,53 +1,10 @@
 @media (max-width: 768px) {
-  #sign-up-container {
-    font-size: 12px;
-    padding: 10px 10px;
-  }
-
-  #sign-up-container a {
-    font-size: 12px;
-  }
-
-  #sign-up-container img {
-    opacity: 0;
-  }
-
   #brands-container {
     padding: 40px 16px;
   }
 
   .brand-item {
     height: 24px;
-  }
-
-  #menu-container {
-    gap: 16px;
-    padding: 20px 16px;
-  }
-
-  #hamburguer-menu {
-    display: block;
-  }
-
-  #logo {
-    font-size: 25px;
-  }
-
-  #navigation-container {
-    display: none;
-  }
-
-  #spacer {
-    display: block;
-    flex-grow: 1;
-  }
-
-  #search-container {
-    display: none;
-  }
-
-  #search-icon {
-    display: block;
   }
 
   #news-arrivals {

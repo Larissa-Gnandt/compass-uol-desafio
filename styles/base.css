@@ -1,23 +1,75 @@
 @font-face {
   font-family: "Satoshi";
-  src: url("fonts/satoshi-regular.ttf") format("truetype");
+  font-weight: 400;
+  src: url("../fonts/satoshi-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  src: url("../fonts/satoshi-medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  src: url("../fonts/satoshi-bold.otf") format("truetype");
 }
 
 @font-face {
   font-family: "Integral";
-  src: url("fonts/integralcf-demibold.otf") format("opentype");
+  src: url("../fonts/integralcf-bold.otf") format("opentype");
 }
 
 html,
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+  box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-family: "Satoshi", sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  line-height: 1;
+  font-family: "Satoshi", sans-serif;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  font-family: "Satoshi", sans-serif;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  font-family: "Satoshi", sans-serif;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  font-family: "Satoshi", sans-serif;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
 }

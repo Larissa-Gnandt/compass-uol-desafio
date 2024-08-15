@@ -4,27 +4,19 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 0;
   padding: 10px 100px;
-  box-sizing: border-box;
 }
 
 #sign-up-container p {
   color: white;
   font-weight: 400;
   font-size: 14px;
-  font-family: "Satoshi", sans-serif;
-  padding: 0;
-  margin: 0;
 }
 
 #sign-up-container a {
   color: white;
   font-weight: 500;
   font-size: 14px;
-  font-family: "Satoshi", sans-serif;
-  padding: 0;
-  margin: 0;
 }
 
 #sign-up-container img {
@@ -34,4 +26,19 @@
 
 #close-mirror {
   opacity: 0;
+}
+
+@media (max-width: 768px) {
+  #sign-up-container {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+
+  #sign-up-container a {
+    font-size: 12px;
+  }
+
+  #sign-up-container img {
+    opacity: 0;
+  }
 }

@@ -2,6 +2,46 @@ function hideSignUp() {
   document.querySelector("#sign-up-container").style.display = "none";
 }
 
+window.addEventListener("resize", () => {
+  handleStatsSeparator();
+  handleHeroContainer();
+});
+
+function handleStatsSeparator() {
+  const statsContainer = document.querySelector(
+    "#hero-details-stats-container"
+  );
+  const dynamicSeparator = document.querySelector(
+    "#hero-details-dynamic-separator"
+  );
+
+  const statItems = Array.from(statsContainer.children);
+
+  const hasMultipleLines = statItems.some(
+    (item) => item.offsetTop !== statItems[0].offsetTop
+  );
+  if (hasMultipleLines) {
+    dynamicSeparator.style.opacity = 0;
+    dynamicSeparator.style.flex = 0;
+  } else {
+    dynamicSeparator.style.opacity = 100;
+    dynamicSeparator.style.flex = 1;
+  }
+}
+
+function handleHeroContainer() {
+  const heroContainer = document.querySelector("#hero-container");
+  const heroItems = Array.from(heroContainer.children);
+  const hasMultipleLines = heroItems.some(
+    (item) => item.offsetTop !== heroItems[0].offsetTop
+  );
+  if (hasMultipleLines) {
+    heroContainer.style.paddingRight = "100px";
+  } else {
+    heroContainer.style.paddingRight = "0";
+  }
+}
+
 const brands = [
   {
     image: "images/versace.svg",
