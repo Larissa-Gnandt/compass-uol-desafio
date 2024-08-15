@@ -1,0 +1,15 @@
+#brands-container {
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 16px;
+  margin: 0;
+  padding: 44px 100px;
+  box-sizing: border-box;
+}
+
+.brand-item {
+  height: 36px;
+}
