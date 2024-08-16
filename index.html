@@ -8,15 +8,11 @@
     <link rel="stylesheet" href="styles/menu.css" />
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/brands.css" />
-    <link rel="stylesheet" href="styles/news-arrivals.css" />
-    <link rel="stylesheet" href="styles/arrivals-container.css" />
-    <link rel="stylesheet" href="styles/view-all-button.css" />
-    <link rel="stylesheet" href="styles/line.css" />
-    <link rel="stylesheet" href="styles/top-selling.css" />
-    <link rel="stylesheet" href="styles/browse-style.css" />
-    <link rel="stylesheet" href="styles/customes-container.css" />
-    <link rel="stylesheet" href="styles/review-carousel.css" />
+    <link rel="stylesheet" href="styles/products.css" />
+    <link rel="stylesheet" href="styles/categories.css" />
+    <link rel="stylesheet" href="styles/reviews.css" />
     <link rel="stylesheet" href="styles/login-container.css" />
+    <link rel="stylesheet" href="styles/footer-container.css" />
     <link rel="stylesheet" href="styles/media.css" />
 
     <title>Homepage</title>
@@ -103,49 +99,49 @@
 
     <div id="brands-container"></div>
 
-    <p id="news-arrivals">NEW ARRIVALS</p>
+    <p class="products-title">NEW ARRIVALS</p>
 
-    <div id="arrivals-container" class="products-container"></div>
+    <div id="new-arrivals-container" class="products-container"></div>
 
-    <button class="view-all-button">View All</button>
+    <button class="products-view-all-button">View All</button>
 
-    <div class="line"></div>
+    <div id="products-divisor"></div>
 
-    <p id="top-selling">TOP SELLING</p>
+    <p class="products-title">TOP SELLING</p>
 
-    <div id="selling-container" class="products-container"></div>
+    <div id="top-selling-container" class="products-container"></div>
 
-    <button class="view-all-button">View All</button>
+    <button class="products-view-all-button">View All</button>
 
-    <div class="browse-style-container">
-      <p class="grid-title">BROWSE BY DRESS STYLE</p>
-      <div class="grid-item">
+    <div id="categories-container">
+      <p id="categories-title">BROWSE BY DRESS STYLE</p>
+      <div class="categories-grid-item">
         <p>Casual</p>
         <img src="images/casual.png" alt="Casual" />
       </div>
-      <div class="grid-item expanded">
+      <div class="categories-grid-item expanded">
         <p>Formal</p>
         <img src="images/formal.png" alt="Formal" />
       </div>
-      <div class="grid-item expanded">
+      <div class="categories-grid-item expanded">
         <p>Party</p>
         <img src="images/party.png" alt="Party" />
       </div>
-      <div class="grid-item">
+      <div class="categories-grid-item">
         <p>Gym</p>
         <img src="images/gym.png" alt="Gym" />
       </div>
     </div>
 
-    <div id="customes-container">
-      <p id="customes">OUR HAPPY CUSTOMERS</p>
+    <div id="reviews-container">
+      <p id="reviews-title">OUR HAPPY CUSTOMERS</p>
       <img id="arrow-left" src="icons/left-arrow.svg" alt="Previous" />
       <img id="arrow-right" src="icons/right-arrow.svg" alt="Next" />
     </div>
 
-    <div class="review-carousel-container">
-      <div class="review-carousel-item-container">
-        <div class="review-stars-container">
+    <div id="reviews-carousel-container">
+      <div class="reviews-carousel-item-container">
+        <div class="reviews-stars-container">
           <img src="icons/star.svg" alt="Star" />
           <img src="icons/star.svg" alt="Star" />
           <img src="icons/star.svg" alt="Star" />
@@ -153,21 +149,19 @@
           <img src="icons/star.svg" alt="Star" />
         </div>
 
-        <div class="review-name-container">
-          <p class="name">Sarah M.<img src="icons/check.svg" alt="Check" /></p>
+        <div class="reviews-name-container">
+          <p>Sarah M.<img src="icons/check.svg" alt="Check" /></p>
         </div>
 
-        <div class="review-text-container">
-          <p class="text">
-            "I'm blown away by the quality and style of the clothes I received
-            from Shop.co. From casual wear to elegant dresses, every piece I've
-            bought has exceeded my expectations.”.
-          </p>
-        </div>
+        <p class="reviews-item-description">
+          "I'm blown away by the quality and style of the clothes I received
+          from Shop.co. From casual wear to elegant dresses, every piece I've
+          bought has exceeded my expectations.”.
+        </p>
       </div>
 
-      <div class="review-carousel-item-container">
-        <div class="review-stars-container">
+      <div class="reviews-carousel-item-container">
+        <div class="reviews-stars-container">
           <img src="icons/star.svg" alt="Star" />
           <img src="icons/star.svg" alt="Star" />
           <img src="icons/star.svg" alt="Star" />
@@ -175,22 +169,19 @@
           <img src="icons/star.svg" alt="Star" />
         </div>
 
-        <div class="review-name-container">
-          <p class="name">Alex K.<img src="icons/check.svg" alt="Check" /></p>
+        <div class="reviews-name-container">
+          <p>Alex K.<img src="icons/check.svg" alt="Check" /></p>
         </div>
 
-        <div class="review-text-container">
-          <p class="text">
-            "Finding clothes that align with my personal style used to be a
-            challenge until I discovered Shop.co. The range of options they
-            offer is truly remarkable, catering to a variety of tastes and
-            occasions.”
-          </p>
-        </div>
+        <p class="reviews-item-description">
+          "Finding clothes that align with my personal style used to be a
+          challenge until I discovered Shop.co. The range of options they offer
+          is truly remarkable, catering to a variety of tastes and occasions.”
+        </p>
       </div>
 
-      <div class="review-carousel-item-container">
-        <div class="review-stars-container">
+      <div class="reviews-carousel-item-container">
+        <div class="reviews-stars-container">
           <img src="icons/star.svg" alt="Star" />
           <img src="icons/star.svg" alt="Star" />
           <img src="icons/star.svg" alt="Star" />
@@ -198,17 +189,15 @@
           <img src="icons/star.svg" alt="Star" />
         </div>
 
-        <div class="review-name-container">
-          <p class="name">James L.<img src="icons/check.svg" alt="Check" /></p>
+        <div class="reviews-name-container">
+          <p>James L.<img src="icons/check.svg" alt="Check" /></p>
         </div>
 
-        <div class="review-text-container">
-          <p class="text">
-            "As someone who's always on the lookout for unique fashion pieces,
-            I'm thrilled to have stumbled upon Shop.co. The selection of clothes
-            is not only diverse but also on-point with the latest trends.”
-          </p>
-        </div>
+        <p class="reviews-item-description">
+          "As someone who's always on the lookout for unique fashion pieces, I'm
+          thrilled to have stumbled upon Shop.co. The selection of clothes is
+          not only diverse but also on-point with the latest trends.”
+        </p>
       </div>
     </div>
 
@@ -224,6 +213,73 @@
         <button id="subscribe-button">Subscribe to Newsletter</button>
       </div>
     </div>
+
+    <!-- <div id="footer-container">
+      <div id="footer-information-container">
+        <div id="footer-logo-container">
+          <a id="footer-logo" href="">SHOP.CO</a>
+          <p id="footer-description">
+            We have clothes that suits your style and which you’re proud to
+            wear. From women to men.
+          </p>
+
+          <div id="footer-social-media-container">
+            <img src="icons/twitter.svg" alt="Twitter" />
+            <img src="icons/facebook.svg" alt="Facebook" />
+            <img src="icons/instagram.svg" alt="Instagram" />
+            <img src="icons/github.svg" alt="GitHub" />
+          </div>
+        </div>
+
+        <div id="footer-company-container" class="footer-general-container">
+          <p class="footer-title">COMPANY</p>
+          <a href="">About</a>
+          <a href="">Features</a>
+          <a href="">Works</a>
+          <a href="">Career</a>
+        </div>
+
+        <div id="footer-help-container" class="footer-general-container">
+          <p class="footer-title">HELP</p>
+          <a href="">Customer Support</a>
+          <a href="">Delivery Details</a>
+          <a href="">Terms & Conditions</a>
+          <a href="">Privacy Policy</a>
+        </div>
+
+        <div id="footer-faq-container" class="footer-general-container">
+          <p class="footer-title">FAQ</p>
+          <a href="">Account</a>
+          <a href="">Manage Deliveries</a>
+          <a href="">Orders</a>
+          <a href="">Payments</a>
+        </div>
+
+        <div id="footer-resources-container" class="footer-general-container">
+          <p class="footer-title">RESOURCES</p>
+          <a href="">Free eBooks</a>
+          <a href="">Development Tutorial</a>
+          <a href="">How to - Blog</a>
+          <a href="">Youtube Playlist</a>
+        </div>
+      </div>
+
+      <div class="footer-line"></div>
+
+      <div id="footer-credit-and-date-container">
+        <p id="footer-logo-and-date">
+          Shop.co © 2000-2023, All Rights Reserved
+        </p>
+
+        <div id="footer-credit-container">
+          <img src="icons/visa.svg" alt="Visa" />
+          <img src="icons/mastercard.svg" alt="Mastercard" />
+          <img src="icons/paypal.svg" alt="PayPal" />
+          <img src="icons/applepay.svg" alt="ApplePay" />
+          <img src="icons/googlepay.svg" alt="GooglePay" />
+        </div>
+      </div>
+    </div> -->
 
     <script src="index.js"></script>
   </body>

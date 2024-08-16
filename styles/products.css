@@ -1,3 +1,11 @@
+.products-title {
+  font-family: "Integral", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 72px 0 0 0;
+  padding: 0;
+}
+
 .products-container {
   display: flex;
   justify-content: center;
@@ -96,4 +104,33 @@
   padding: 6px 14px;
   background-color: #ff33331a;
   border-radius: 100px;
+}
+
+#products-divisor {
+  width: 100% - 200px;
+  height: 1px;
+  background-color: #0000001a;
+  margin: 0 100px;
+}
+
+.products-view-all-button {
+  border-radius: 62px;
+  border: 2px solid #0000001a;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin: 36px auto;
+  padding: 0;
+  display: block;
+  width: 218px;
+  height: 52px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+}
+
+.products-view-all-button:hover {
+  background-color: #fafafa;
 }

@@ -42,6 +42,77 @@ function handleHeroContainer() {
   }
 }
 
+function setupProducts(products, containerId) {
+  const container = document.getElementById(containerId);
+  products.forEach((product) => {
+    const productItem = document.createElement("div");
+    productItem.className = "product-container";
+
+    const productImage = document.createElement("img");
+    productImage.className = "product-image";
+    productImage.src = product.image;
+    productImage.alt = product.name;
+    productItem.appendChild(productImage);
+
+    const productDetails = document.createElement("div");
+    productDetails.className = "product-details-container";
+    productItem.appendChild(productDetails);
+
+    const productName = document.createElement("p");
+    productName.className = "product-name";
+    productName.textContent = product.name;
+    productDetails.appendChild(productName);
+
+    const ratingContainer = document.createElement("div");
+    ratingContainer.className = "product-rating-container";
+    productDetails.appendChild(ratingContainer);
+
+    for (let index = 1; index <= product.rating; index++) {
+      const star = document.createElement("img");
+      star.src = "icons/star.svg";
+      star.alt = "star";
+      ratingContainer.appendChild(star);
+    }
+
+    if (product.rating % 1 !== 0) {
+      const halfStar = document.createElement("img");
+      halfStar.src = "icons/star-half.svg";
+      halfStar.alt = "half-star";
+      ratingContainer.appendChild(halfStar);
+    }
+
+    const rating = document.createElement("p");
+    rating.className = "product-rating";
+    rating.textContent = `${product.rating}/5`;
+    ratingContainer.appendChild(rating);
+
+    const priceContainer = document.createElement("div");
+    priceContainer.className = "price-container";
+    productDetails.appendChild(priceContainer);
+
+    const price = document.createElement("p");
+    price.className = "product-price";
+    price.textContent = product.price;
+    priceContainer.appendChild(price);
+
+    if (product.priceFrom) {
+      const priceFrom = document.createElement("p");
+      priceFrom.className = "product-price-from";
+      priceFrom.textContent = product.priceFrom;
+      priceContainer.appendChild(priceFrom);
+    }
+
+    if (product.discount) {
+      const discount = document.createElement("p");
+      discount.className = "product-discount-percentage";
+      discount.textContent = product.discount;
+      priceContainer.appendChild(discount);
+    }
+
+    container.appendChild(productItem);
+  });
+}
+
 const brands = [
   {
     image: "images/versace.svg",
@@ -73,7 +144,7 @@ brands.forEach((brand) => {
   brandsContainer.appendChild(brandItem);
 });
 
-const arrivalsProducts = [
+const newArrivalsProducts = [
   {
     image: "images/t-shirt1.png",
     name: "T-shirt with Tape Details",
@@ -107,76 +178,8 @@ const arrivalsProducts = [
     discount: "-30%",
   },
 ];
-const arrivalsContainer = document.getElementById("arrivals-container");
-arrivalsProducts.forEach((product) => {
-  const productItem = document.createElement("div");
-  productItem.className = "product-container";
 
-  const productImage = document.createElement("img");
-  productImage.className = "product-image";
-  productImage.src = product.image;
-  productImage.alt = product.name;
-  productItem.appendChild(productImage);
-
-  const productDetails = document.createElement("div");
-  productDetails.className = "product-details-container";
-  productItem.appendChild(productDetails);
-
-  const productName = document.createElement("p");
-  productName.className = "product-name";
-  productName.textContent = product.name;
-  productDetails.appendChild(productName);
-
-  const ratingContainer = document.createElement("div");
-  ratingContainer.className = "product-rating-container";
-  productDetails.appendChild(ratingContainer);
-
-  for (let index = 1; index <= product.rating; index++) {
-    const star = document.createElement("img");
-    star.src = "icons/star.svg";
-    star.alt = "star";
-    ratingContainer.appendChild(star);
-  }
-
-  if (product.rating % 1 !== 0) {
-    const halfStar = document.createElement("img");
-    halfStar.src = "icons/star-half.svg";
-    halfStar.alt = "half-star";
-    ratingContainer.appendChild(halfStar);
-  }
-
-  const rating = document.createElement("p");
-  rating.className = "product-rating";
-  rating.textContent = `${product.rating}/5`;
-  ratingContainer.appendChild(rating);
-
-  const priceContainer = document.createElement("div");
-  priceContainer.className = "price-container";
-  productDetails.appendChild(priceContainer);
-
-  const price = document.createElement("p");
-  price.className = "product-price";
-  price.textContent = product.price;
-  priceContainer.appendChild(price);
-
-  if (product.priceFrom) {
-    const priceFrom = document.createElement("p");
-    priceFrom.className = "product-price-from";
-    priceFrom.textContent = product.priceFrom;
-    priceContainer.appendChild(priceFrom);
-  }
-
-  if (product.discount) {
-    const discount = document.createElement("p");
-    discount.className = "product-discount-percentage";
-    discount.textContent = product.discount;
-    priceContainer.appendChild(discount);
-  }
-
-  arrivalsContainer.appendChild(productItem);
-});
-
-const sellingProducts = [
+const topSellingProducts = [
   {
     image: "images/t-shirt4.png",
     name: "Vertical Striped Shirt",
@@ -211,71 +214,5 @@ const sellingProducts = [
   },
 ];
 
-const sellingContainer = document.getElementById("selling-container");
-sellingProducts.forEach((product) => {
-  const productItem = document.createElement("div");
-  productItem.className = "product-container";
-
-  const productImage = document.createElement("img");
-  productImage.className = "product-image";
-  productImage.src = product.image;
-  productImage.alt = product.name;
-  productItem.appendChild(productImage);
-
-  const productDetails = document.createElement("div");
-  productDetails.className = "product-details-container";
-  productItem.appendChild(productDetails);
-
-  const productName = document.createElement("p");
-  productName.className = "product-name";
-  productName.textContent = product.name;
-  productDetails.appendChild(productName);
-
-  const ratingContainer = document.createElement("div");
-  ratingContainer.className = "product-rating-container";
-  productDetails.appendChild(ratingContainer);
-
-  for (let index = 1; index <= product.rating; index++) {
-    const star = document.createElement("img");
-    star.src = "icons/star.svg";
-    star.alt = "star";
-    ratingContainer.appendChild(star);
-  }
-
-  if (product.rating % 1 !== 0) {
-    const halfStar = document.createElement("img");
-    halfStar.src = "icons/star-half.svg";
-    halfStar.alt = "half-star";
-    ratingContainer.appendChild(halfStar);
-  }
-
-  const rating = document.createElement("p");
-  rating.className = "product-rating";
-  rating.textContent = `${product.rating}/5`;
-  ratingContainer.appendChild(rating);
-
-  const priceContainer = document.createElement("div");
-  priceContainer.className = "price-container";
-  productDetails.appendChild(priceContainer);
-
-  const price = document.createElement("p");
-  price.className = "product-price";
-  price.textContent = product.price;
-  priceContainer.appendChild(price);
-
-  if (product.priceFrom) {
-    const priceFrom = document.createElement("p");
-    priceFrom.className = "product-price-from";
-    priceFrom.textContent = product.priceFrom;
-    priceContainer.appendChild(priceFrom);
-  }
-
-  if (product.discount) {
-    const discount = document.createElement("p");
-    discount.className = "product-discount-percentage";
-    discount.textContent = product.discount;
-    priceContainer.appendChild(discount);
-  }
-
-  sellingContainer.appendChild(productItem);
-});
+setupProducts(newArrivalsProducts, "new-arrivals-container");
+setupProducts(topSellingProducts, "top-selling-container");
