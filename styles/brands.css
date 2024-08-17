@@ -1,15 +1,31 @@
-#brands-container {
+#brands-background-container {
   background-color: black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+#brands-container {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px 16px;
-  margin: 0;
+  gap: 34px;
+  width: 100%;
+  max-width: 1440px;
   padding: 44px 100px;
-  box-sizing: border-box;
 }
 
 .brand-item {
   height: 36px;
+}
+
+@media (max-width: 768px) {
+  #brands-container {
+    padding: 40px 16px;
+  }
+
+  .brand-item {
+    height: 24px;
+    min-width: 120px;
+  }
 }

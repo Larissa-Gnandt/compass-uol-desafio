@@ -18,16 +18,18 @@
     <title>Homepage</title>
   </head>
   <body>
-    <div id="sign-up-container">
-      <img id="close-mirror" />
-      <p>
-        Sign up and get 20% off to your first order.&nbsp;
-        <a href="">Sign Up Now</a>
-      </p>
-      <img src="icons/x.svg" alt="Close" onclick="hideSignUp()" />
+    <div id="sign-up-background-container">
+      <div id="sign-up-container">
+        <img id="close-mirror" />
+        <p>
+          Sign up and get 20% off to your first order.&nbsp;
+          <a href="">Sign Up Now</a>
+        </p>
+        <img src="icons/x.svg" alt="Close" onclick="hideSignUp()" />
+      </div>
     </div>
 
-    <!-- <div id="menu-container">
+    <div id="menu-container">
       <img id="menu-hamburguer" src="icons/hamburguer-menu.svg" alt="Menu" />
 
       <a id="menu-logo" href="">SHOP.CO</a>
@@ -48,56 +50,62 @@
 
       <div id="menu-user-container">
         <img id="menu-search-icon" src="icons/search.svg" alt="Search" />
-        <img src="icons/cart.png" alt="Cart" />
+        <img src="icons/cart.svg" alt="Cart" />
         <img src="icons/profile.svg" alt="Profile" />
       </div>
     </div>
 
-    <div id="hero-container">
-      <div id="hero-details-container">
-        <p id="hero-details-title">FIND CLOTHES THAT MATCHES YOUR STYLE</p>
-        <p id="hero-details-description">
-          Browse through our diverse range of meticulously crafted garments,
-          designed to bring out your individuality and cater to your sense of
-          style.
-        </p>
-        <button id="hero-details-button">Shop Now</button>
+    <div id="hero-background-container">
+      <div id="hero-container">
+        <div id="hero-details-container">
+          <p id="hero-details-title">FIND CLOTHES THAT MATCHES YOUR STYLE</p>
+          <p id="hero-details-description">
+            Browse through our diverse range of meticulously crafted garments,
+            designed to bring out your individuality and cater to your sense of
+            style.
+          </p>
+          <button id="hero-details-button">Shop Now</button>
 
-        <div id="hero-details-stats-container">
-          <div class="hero-details-stats-item">
-            <p class="hero-details-stats-number">200+</p>
-            <p class="hero-details-stats-text">International Brands</p>
-          </div>
+          <div id="hero-details-stats-container">
+            <div class="hero-details-stats-item">
+              <p class="hero-details-stats-number">200+</p>
+              <p class="hero-details-stats-text">International Brands</p>
+            </div>
 
-          <div class="hero-details-separator">
-            <div class="hero-details-separator-line"></div>
-          </div>
+            <div class="hero-details-separator">
+              <div class="hero-details-separator-line"></div>
+            </div>
 
-          <div class="hero-details-stats-item">
-            <p class="hero-details-stats-number">2,000+</p>
-            <p class="hero-details-stats-text">High-Quality Products</p>
-          </div>
+            <div class="hero-details-stats-item">
+              <p class="hero-details-stats-number">2,000+</p>
+              <p class="hero-details-stats-text">High-Quality Products</p>
+            </div>
 
-          <div
-            id="hero-details-dynamic-separator"
-            class="hero-details-separator"
-          >
-            <div class="hero-details-separator-line"></div>
-          </div>
+            <div
+              id="hero-details-dynamic-separator"
+              class="hero-details-separator"
+            >
+              <div class="hero-details-separator-line"></div>
+            </div>
 
-          <div class="hero-details-stats-item">
-            <p class="hero-details-stats-number">30,000+</p>
-            <p class="hero-details-stats-text">Happy Customers</p>
+            <div class="hero-details-stats-item">
+              <p class="hero-details-stats-number">30,000+</p>
+              <p class="hero-details-stats-text">Happy Customers</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="hero-image-container">
-        <div id="hero-image"></div>
+        <div id="hero-image-container">
+          <div id="hero-image"></div>
+          <img id="hero-left-star" src="icons/hero-star.svg" />
+          <img id="hero-right-star" src="icons/hero-star.svg" />
+        </div>
       </div>
     </div>
 
-    <div id="brands-container"></div>
+    <div id="brands-background-container">
+      <div id="brands-container"></div>
+    </div>
 
     <p class="products-title">NEW ARRIVALS</p>
 
@@ -113,27 +121,29 @@
 
     <button class="products-view-all-button">View All</button>
 
-    <div id="categories-container">
-      <p id="categories-title">BROWSE BY DRESS STYLE</p>
-      <div class="categories-grid-item">
-        <p>Casual</p>
-        <img src="images/casual.png" alt="Casual" />
+    <div id="categories-background-container">
+      <div id="categories-container">
+        <p id="categories-title">BROWSE BY DRESS STYLE</p>
+        <div class="categories-grid-item">
+          <p>Casual</p>
+          <img src="images/casual.png" alt="Casual" />
+        </div>
+        <div class="categories-grid-item expanded">
+          <p>Formal</p>
+          <img src="images/formal.png" alt="Formal" />
+        </div>
+        <div class="categories-grid-item expanded">
+          <p>Party</p>
+          <img src="images/party.png" alt="Party" />
+        </div>
+        <div class="categories-grid-item">
+          <p>Gym</p>
+          <img src="images/gym.png" alt="Gym" />
+        </div>
       </div>
-      <div class="categories-grid-item expanded">
-        <p>Formal</p>
-        <img src="images/formal.png" alt="Formal" />
-      </div>
-      <div class="categories-grid-item expanded">
-        <p>Party</p>
-        <img src="images/party.png" alt="Party" />
-      </div>
-      <div class="categories-grid-item">
-        <p>Gym</p>
-        <img src="images/gym.png" alt="Gym" />
-      </div>
-    </div> -->
+    </div>
 
-    <div id="reviews-container">
+    <!-- <div id="reviews-container">
       <p id="reviews-title">OUR HAPPY CUSTOMERS</p>
       <img id="arrow-left" src="icons/left-arrow.svg" alt="Previous" />
       <img id="arrow-right" src="icons/right-arrow.svg" alt="Next" />
@@ -199,20 +209,23 @@
           not only diverse but also on-point with the latest trends.”
         </p>
       </div>
-    </div>
+    </div> -->
 
-    <div class="newsletter-container">
-      <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+    <div id="newsletter-background-container">
+      <div id="newsletter-grey-background"></div>
+      <div id="newsletter-container">
+        <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
 
-      <div id="newsletter-subscribe-container">
-        <div id="newsletter-email-input">
-          <img src="icons/envelope.svg" alt="Envelope" />
-          <input type="text" placeholder="Enter your email address" />
+        <div id="newsletter-subscribe-container">
+          <div id="newsletter-email-input">
+            <img src="icons/envelope.svg" alt="Envelope" />
+            <input type="text" placeholder="Enter your email address" />
+          </div>
+
+          <button id="newsletter-subscribe-button">
+            Subscribe to Newsletter
+          </button>
         </div>
-
-        <button id="newsletter-subscribe-button">
-          Subscribe to Newsletter
-        </button>
       </div>
     </div>
 

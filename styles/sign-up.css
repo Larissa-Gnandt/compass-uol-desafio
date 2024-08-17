@@ -1,9 +1,15 @@
+#sign-up-background-container {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
 #sign-up-container {
   display: flex;
-  background-color: black;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1440px;
   padding: 10px 100px;
 }
 

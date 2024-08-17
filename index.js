@@ -3,42 +3,53 @@ function hideSignUp() {
 }
 
 window.addEventListener("resize", () => {
-  handleStatsSeparator();
   handleHeroContainer();
+  handleStatsSeparator();
+  handleBrandsJustifyContent();
 });
 
+function containerHasMultipleLines(containerId) {
+  const container = document.querySelector(containerId);
+  const items = Array.from(container.children);
+  return items.some((item) => item.offsetTop !== items[0].offsetTop);
+}
+
 function handleStatsSeparator() {
-  const statsContainer = document.querySelector(
-    "#hero-details-stats-container"
-  );
   const dynamicSeparator = document.querySelector(
     "#hero-details-dynamic-separator"
   );
 
-  const statItems = Array.from(statsContainer.children);
-
-  const hasMultipleLines = statItems.some(
-    (item) => item.offsetTop !== statItems[0].offsetTop
+  const hasMultipleLines = containerHasMultipleLines(
+    "#hero-details-stats-container"
   );
   if (hasMultipleLines) {
-    dynamicSeparator.style.opacity = 0;
-    dynamicSeparator.style.flex = 0;
+    dynamicSeparator.style.opacity = "0";
   } else {
-    dynamicSeparator.style.opacity = 100;
-    dynamicSeparator.style.flex = 1;
+    dynamicSeparator.style.opacity = "1";
   }
 }
 
 function handleHeroContainer() {
   const heroContainer = document.querySelector("#hero-container");
-  const heroItems = Array.from(heroContainer.children);
-  const hasMultipleLines = heroItems.some(
-    (item) => item.offsetTop !== heroItems[0].offsetTop
-  );
-  if (hasMultipleLines) {
-    heroContainer.style.paddingRight = "100px";
+  if (window.innerWidth > 768) {
+    heroContainer.style.paddingLeft = "100px";
+    if (containerHasMultipleLines("#hero-container")) {
+      heroContainer.style.paddingRight = "100px";
+    } else {
+      heroContainer.style.paddingRight = "0";
+    }
   } else {
-    heroContainer.style.paddingRight = "0";
+    heroContainer.style.paddingLeft = "16px";
+    heroContainer.style.paddingRight = "16px";
+  }
+}
+
+function handleBrandsJustifyContent() {
+  const brandsContainer = document.querySelector("#brands-container");
+  if (containerHasMultipleLines("#brands-container")) {
+    brandsContainer.style.justifyContent = "center";
+  } else {
+    brandsContainer.style.justifyContent = "space-between";
   }
 }
 
