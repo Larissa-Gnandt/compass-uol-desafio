@@ -20,7 +20,7 @@
   <body>
     <div id="sign-up-background-container">
       <div id="sign-up-container">
-        <img id="close-mirror" />
+        <div id="close-mirror"></div>
         <p>
           Sign up and get 20% off to your first order.&nbsp;
           <a href="">Sign Up Now</a>
@@ -143,73 +143,23 @@
       </div>
     </div>
 
-    <!-- <div id="reviews-container">
-      <p id="reviews-title">OUR HAPPY CUSTOMERS</p>
-      <img id="arrow-left" src="icons/left-arrow.svg" alt="Previous" />
-      <img id="arrow-right" src="icons/right-arrow.svg" alt="Next" />
+    <div id="reviews-background-container">
+      <div id="reviews-title-container">
+        <p id="reviews-title">OUR HAPPY CUSTOMERS</p>
+        <img
+          src="icons/left-arrow.svg"
+          alt="Previous"
+          onclick="previousReview()"
+        />
+        <img src="icons/right-arrow.svg" alt="Next" onclick="nextReview()" />
+      </div>
+
+      <div id="reviews-carousel-background-container">
+        <div id="reviews-carousel-blur-left" class="reviews-blur"></div>
+        <div id="reviews-carousel-container"></div>
+        <div id="reviews-carousel-blur-right" class="reviews-blur"></div>
+      </div>
     </div>
-
-    <div id="reviews-carousel-container">
-      <div class="reviews-carousel-item-container">
-        <div class="reviews-stars-container">
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-        </div>
-
-        <div class="reviews-name-container">
-          <p>Sarah M.<img src="icons/check.svg" alt="Check" /></p>
-        </div>
-
-        <p class="reviews-item-description">
-          "I'm blown away by the quality and style of the clothes I received
-          from Shop.co. From casual wear to elegant dresses, every piece I've
-          bought has exceeded my expectations.”.
-        </p>
-      </div>
-
-      <div class="reviews-carousel-item-container">
-        <div class="reviews-stars-container">
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-        </div>
-
-        <div class="reviews-name-container">
-          <p>Alex K.<img src="icons/check.svg" alt="Check" /></p>
-        </div>
-
-        <p class="reviews-item-description">
-          "Finding clothes that align with my personal style used to be a
-          challenge until I discovered Shop.co. The range of options they offer
-          is truly remarkable, catering to a variety of tastes and occasions.”
-        </p>
-      </div>
-
-      <div class="reviews-carousel-item-container">
-        <div class="reviews-stars-container">
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-          <img src="icons/star.svg" alt="Star" />
-        </div>
-
-        <div class="reviews-name-container">
-          <p>James L.<img src="icons/check.svg" alt="Check" /></p>
-        </div>
-
-        <p class="reviews-item-description">
-          "As someone who's always on the lookout for unique fashion pieces, I'm
-          thrilled to have stumbled upon Shop.co. The selection of clothes is
-          not only diverse but also on-point with the latest trends.”
-        </p>
-      </div>
-    </div> -->
 
     <div id="newsletter-background-container">
       <div id="newsletter-grey-background"></div>
@@ -229,69 +179,81 @@
       </div>
     </div>
 
-    <div id="footer-container">
-      <div id="footer-information-container">
-        <div id="footer-logo-container">
-          <a id="footer-logo" href="">SHOP.CO</a>
-          <p id="footer-description">
-            We have clothes that suits your style and which you’re proud to
-            wear. From women to men.
-          </p>
+    <div id="footer-background-container">
+      <div id="footer-container">
+        <div id="footer-information-container">
+          <div id="footer-logo-container">
+            <a id="footer-logo" href="">SHOP.CO</a>
+            <p id="footer-description">
+              We have clothes that suits your style and which you’re proud to
+              wear. From women to men.
+            </p>
 
-          <div id="footer-social-media-container">
-            <img src="icons/twitter.svg" alt="Twitter" />
-            <img src="icons/facebook.svg" alt="Facebook" />
-            <img src="icons/instagram.svg" alt="Instagram" />
-            <img src="icons/github.svg" alt="GitHub" />
+            <div id="footer-social-media-container">
+              <img src="icons/twitter.svg" alt="Twitter" />
+              <img src="icons/facebook.svg" alt="Facebook" />
+              <img src="icons/instagram.svg" alt="Instagram" />
+              <img src="icons/github.svg" alt="GitHub" />
+            </div>
+          </div>
+
+          <div id="footer-company-container" class="footer-general-container">
+            <p class="footer-title">COMPANY</p>
+            <a href="">About</a>
+            <a href="">Features</a>
+            <a href="">Works</a>
+            <a href="">Career</a>
+          </div>
+
+          <div id="footer-help-container" class="footer-general-container">
+            <p class="footer-title">HELP</p>
+            <a href="">Customer Support</a>
+            <a href="">Delivery Details</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+          </div>
+
+          <div id="footer-faq-container" class="footer-general-container">
+            <p class="footer-title">FAQ</p>
+            <a href="">Account</a>
+            <a href="">Manage Deliveries</a>
+            <a href="">Orders</a>
+            <a href="">Payments</a>
+          </div>
+
+          <div id="footer-resources-container" class="footer-general-container">
+            <p class="footer-title">RESOURCES</p>
+            <a href="">Free eBooks</a>
+            <a href="">Development Tutorial</a>
+            <a href="">How to - Blog</a>
+            <a href="">Youtube Playlist</a>
           </div>
         </div>
 
-        <div id="footer-company-container" class="footer-general-container">
-          <p class="footer-title">COMPANY</p>
-          <a href="">About</a>
-          <a href="">Features</a>
-          <a href="">Works</a>
-          <a href="">Career</a>
-        </div>
+        <div class="footer-line"></div>
 
-        <div id="footer-help-container" class="footer-general-container">
-          <p class="footer-title">HELP</p>
-          <a href="">Customer Support</a>
-          <a href="">Delivery Details</a>
-          <a href="">Terms & Conditions</a>
-          <a href="">Privacy Policy</a>
-        </div>
+        <div id="footer-credit-and-date-container">
+          <p id="footer-logo-and-date">
+            Shop.co © 2000-2023, All Rights Reserved
+          </p>
 
-        <div id="footer-faq-container" class="footer-general-container">
-          <p class="footer-title">FAQ</p>
-          <a href="">Account</a>
-          <a href="">Manage Deliveries</a>
-          <a href="">Orders</a>
-          <a href="">Payments</a>
-        </div>
-
-        <div id="footer-resources-container" class="footer-general-container">
-          <p class="footer-title">RESOURCES</p>
-          <a href="">Free eBooks</a>
-          <a href="">Development Tutorial</a>
-          <a href="">How to - Blog</a>
-          <a href="">Youtube Playlist</a>
-        </div>
-      </div>
-
-      <div class="footer-line"></div>
-
-      <div id="footer-credit-and-date-container">
-        <p id="footer-logo-and-date">
-          Shop.co © 2000-2023, All Rights Reserved
-        </p>
-
-        <div id="footer-credit-container">
-          <img src="icons/visa.svg" alt="Visa" />
-          <img src="icons/mastercard.svg" alt="Mastercard" />
-          <img src="icons/paypal.svg" alt="PayPal" />
-          <img src="icons/applepay.svg" alt="ApplePay" />
-          <img src="icons/googlepay.svg" alt="GooglePay" />
+          <div id="footer-credit-cards-container">
+            <div class="footer-credit-card">
+              <img src="icons/visa.svg" alt="Visa" />
+            </div>
+            <div class="footer-credit-card">
+              <img src="icons/mastercard.svg" alt="Mastercard" />
+            </div>
+            <div class="footer-credit-card">
+              <img src="icons/paypal.svg" alt="PayPal" />
+            </div>
+            <div class="footer-credit-card">
+              <img src="icons/apple-pay.svg" alt="ApplePay" />
+            </div>
+            <div class="footer-credit-card">
+              <img src="icons/google-pay.svg" alt="GooglePay" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

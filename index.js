@@ -2,6 +2,26 @@ function hideSignUp() {
   document.querySelector("#sign-up-container").style.display = "none";
 }
 
+function previousReview() {
+  const reviewsContainer = document.querySelector(
+    "#reviews-carousel-container"
+  );
+  reviewsContainer.scrollBy({
+    left: -reviewsContainer.offsetWidth,
+    behavior: "smooth",
+  });
+}
+
+function nextReview() {
+  const reviewsContainer = document.querySelector(
+    "#reviews-carousel-container"
+  );
+  reviewsContainer.scrollBy({
+    left: reviewsContainer.offsetWidth,
+    behavior: "smooth",
+  });
+}
+
 window.addEventListener("resize", () => {
   handleHeroContainer();
   handleStatsSeparator();
@@ -227,3 +247,58 @@ const topSellingProducts = [
 
 setupProducts(newArrivalsProducts, "new-arrivals-container");
 setupProducts(topSellingProducts, "top-selling-container");
+
+const reviews = [
+  {
+    name: "Sarah M.",
+    content: `"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."`,
+    rate: 5,
+  },
+  {
+    name: "Alex K.",
+    content: `"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."`,
+    rate: 5,
+  },
+  {
+    name: "James L.",
+    content: `"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."`,
+    rate: 5,
+  },
+];
+
+const reviewsContainer = document.getElementById("reviews-carousel-container");
+[...reviews, ...reviews].forEach((review) => {
+  const reviewItem = document.createElement("div");
+  reviewItem.className = "reviews-carousel-item-container";
+
+  const ratingContainer = document.createElement("div");
+  ratingContainer.className = "reviews-stars-container";
+  reviewItem.appendChild(ratingContainer);
+
+  for (let index = 1; index <= review.rate; index++) {
+    const star = document.createElement("img");
+    star.src = "icons/star.svg";
+    star.alt = "Star";
+    ratingContainer.appendChild(star);
+  }
+
+  const reviewNameContainer = document.createElement("div");
+  reviewNameContainer.className = "reviews-name-container";
+  reviewItem.appendChild(reviewNameContainer);
+
+  const reviewName = document.createElement("p");
+  reviewName.textContent = review.name;
+  reviewNameContainer.appendChild(reviewName);
+
+  const checkIcon = document.createElement("img");
+  checkIcon.src = "icons/check.svg";
+  checkIcon.alt = "Check";
+  reviewNameContainer.appendChild(checkIcon);
+
+  const reviewContent = document.createElement("p");
+  reviewContent.className = "reviews-item-content";
+  reviewContent.textContent = review.content;
+  reviewItem.appendChild(reviewContent);
+
+  reviewsContainer.appendChild(reviewItem);
+});

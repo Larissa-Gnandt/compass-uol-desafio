@@ -89,6 +89,7 @@
 #menu-user-container img {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
 @media (max-width: 1120px) {

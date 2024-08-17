@@ -17,6 +17,7 @@
 
 .brand-item {
   height: 36px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

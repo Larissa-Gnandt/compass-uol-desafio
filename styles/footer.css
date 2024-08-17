@@ -1,15 +1,22 @@
+#footer-background-container {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
 #footer-container {
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
   text-align: center;
-  padding: 50px 100px 80px 100px;
+  padding: 50px 100px 0 100px;
+  width: 100%;
+  max-width: 1440px;
 }
 
 #footer-information-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
 }
 
 #footer-logo-container {
@@ -38,9 +45,12 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 35px 0 0 0;
   gap: 12px;
   margin-top: auto;
+}
+
+#footer-social-media-container img {
+  cursor: pointer;
 }
 
 .footer-general-container {
@@ -76,16 +86,93 @@
 
 #footer-credit-and-date-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
   margin: 20px 0 0 0;
+  padding-bottom: 50px;
+}
+
+#footer-credit-and-date-container p {
   font-size: 14px;
   font-weight: 400;
   color: #00000099;
+  text-align: start;
+  flex: 1;
 }
 
-#footer-credit-container {
+#footer-credit-cards-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
+}
+
+.footer-credit-card {
+  width: 46px;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #b7b7b714;
+  border-width: 1px;
+  border-color: #d6dce5;
+}
+
+@media (max-width: 1000px) {
+  #footer-information-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  #footer-information-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #footer-container {
+    padding: 32px 16px 0 16px;
+  }
+
+  #footer-information-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  #footer-logo-container {
+    max-width: 100%;
+    grid-column: span 2;
+  }
+
+  #footer-social-media-container {
+    margin-top: 20px;
+  }
+
+  .footer-general-container {
+    gap: 4px;
+  }
+
+  .footer-general-container a {
+    font-size: 14px;
+  }
+
+  #footer-credit-and-date-container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  #footer-credit-cards-container {
+    gap: 10px;
+  }
+
+  .footer-credit-card {
+    width: 40px;
+    height: 26px;
+    border-radius: 4px;
+  }
 }

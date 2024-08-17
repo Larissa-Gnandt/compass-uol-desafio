@@ -86,12 +86,13 @@
 }
 
 #newsletter-subscribe-button:hover {
-  background-color: #fafafa;
+  background-color: #f2f2f2;
 }
 
 @media (max-width: 768px) {
   #newsletter-background-container {
     padding: 0 16px;
+    margin: 40px auto 0 auto;
   }
 
   #newsletter-container {

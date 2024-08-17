@@ -24,6 +24,7 @@
   justify-content: start;
   align-items: start;
   gap: 16px;
+  cursor: pointer;
 }
 
 .product-image {
