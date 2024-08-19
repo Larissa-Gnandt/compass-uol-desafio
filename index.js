@@ -2,6 +2,25 @@ function hideSignUp() {
   document.querySelector("#sign-up-container").style.display = "none";
 }
 
+const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+function subscribeToNewsletter() {
+  const emailInput = document.getElementById("email-input");
+  const errorMessage = document.getElementById("newsletter-subscribe-error");
+  const successMessage = document.getElementById(
+    "newsletter-subscribe-success"
+  );
+  const emailValue = emailInput.value;
+
+  if (emailPattern.test(emailValue)) {
+    errorMessage.style.display = "none";
+    successMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "block";
+    successMessage.style.display = "none";
+  }
+}
+
 function previousReview() {
   const reviewsContainer = document.querySelector(
     "#reviews-carousel-container"

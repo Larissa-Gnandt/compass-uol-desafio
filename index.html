@@ -164,15 +164,30 @@
     <div id="newsletter-background-container">
       <div id="newsletter-grey-background"></div>
       <div id="newsletter-container">
-        <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+        <p id="newsletter-title">STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
 
         <div id="newsletter-subscribe-container">
           <div id="newsletter-email-input">
             <img src="icons/envelope.svg" alt="Envelope" />
-            <input type="text" placeholder="Enter your email address" />
+            <input
+              id="email-input"
+              type="text"
+              placeholder="Enter your email address"
+            />
           </div>
 
-          <button id="newsletter-subscribe-button">
+          <p id="newsletter-subscribe-error">
+            E-mail inválido! Por favor, tente novamente.
+          </p>
+
+          <p id="newsletter-subscribe-success">
+            E-mail cadastrado com sucesso!
+          </p>
+
+          <button
+            id="newsletter-subscribe-button"
+            onclick="subscribeToNewsletter()"
+          >
             Subscribe to Newsletter
           </button>
         </div>

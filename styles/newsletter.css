@@ -30,7 +30,7 @@
   z-index: 1;
 }
 
-#newsletter-container p {
+#newsletter-title {
   font-family: "Integral", sans-serif;
   font-size: 40px;
   font-weight: 700;
@@ -89,6 +89,25 @@
   background-color: #f2f2f2;
 }
 
+#newsletter-subscribe-success {
+  display: none;
+  color: green;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: start;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#newsletter-subscribe-error {
+  display: none;
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
 @media (max-width: 768px) {
   #newsletter-background-container {
     padding: 0 16px;
@@ -99,7 +118,7 @@
     padding: 32px 24px;
   }
 
-  #newsletter-container p {
+  #newsletter-title {
     font-size: 32px;
   }
 
