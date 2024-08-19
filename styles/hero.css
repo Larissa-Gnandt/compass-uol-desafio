@@ -92,7 +92,7 @@
 
 .hero-details-stats-number {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
   color: black;
 }
 
@@ -155,16 +155,30 @@
   }
 
   #hero-left-star {
-    top: 30%;
-    left: 54px;
+    top: 50%;
+
+    /* left: 54px; */
     width: 44px;
     height: 44px;
   }
 
   #hero-right-star {
-    top: 5%;
-    right: 48px;
+    top: 50%;
+    /* right: 48px; */
     width: 76px;
     height: 76px;
+    z-index: 100;
+  }
+
+  .hero-details-stats-number {
+    font-size: 24px;
+  }
+
+  .hero-details-stats-text {
+    font-size: 12px;
+  }
+
+  #hero-details-dynamic-separator {
+    display: none;
   }
 }

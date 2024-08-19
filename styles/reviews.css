@@ -144,6 +144,8 @@
 
   .reviews-carousel-item-container {
     padding: 24px;
+    width: 100%;
+    min-width: 100%;
   }
 
   .reviews-name-container p {

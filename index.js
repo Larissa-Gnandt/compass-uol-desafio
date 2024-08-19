@@ -321,3 +321,7 @@ const reviewsContainer = document.getElementById("reviews-carousel-container");
 
   reviewsContainer.appendChild(reviewItem);
 });
+
+handleHeroContainer();
+handleStatsSeparator();
+handleBrandsJustifyContent();
